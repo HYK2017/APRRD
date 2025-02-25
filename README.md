@@ -95,19 +95,17 @@ python train.py
 ```
 
 Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained models.  
-```shell
-python test.py
-```
 -Loading the model parameters stored as `../pretrained/APR_pre.pth` and `../pretrained/APR_RD_pre.pth`.  
 -Each result is stored in `../result/SIDD_Validation_inf`, `../result/SIDD_Benchmark_inf`, and `../result/DND_Benchmark_inf`, respectively.  
+```shell
+python test.py
+```
 
 Validation  
-```shell
-python validate.py
-```
 -Calculation of PSNR and SSIM for the test results of SIDD Val.  
 -SIDD Bench and DND Bench require separate processing for submission (refer to their websites).  
-python test.py
+```shell
+python validate.py
 ```
 
 ## Acknowledgements
