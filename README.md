@@ -46,7 +46,8 @@ Prepare the [SIDD dataset](https://abdokamel.github.io/sidd/)
 -SIDD Benchmark: Download `Noisy sRGB data` from `SIDD Benchmark Data`.  
 Prepare the [DND dataset](https://noise.visinf.tu-darmstadt.de/downloads/)  
 -DND Benchmark: Download `Benchmark data` (12.8 GB).  
-For training and evaluation using our code, organize the prepared datasets as follows.   
+
+For training and evaluation using our code, organize the above prepared datasets as follows.   
 ```
 dataset/
    ├─ SIDD_Medium_Srgb/
