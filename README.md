@@ -12,7 +12,7 @@ Recent advancements in self-supervised denoising have made it possible to train 
 - Ubuntu 20.04.5 LTS
 - Python 3.8.10
 - Pytorch 1.12.1 (CUDAtoolkit=11.3)
-- RTX 2080ti x 2ea
+- RTX 2080ti * 2ea
 
 ## Code Structure
 ```
