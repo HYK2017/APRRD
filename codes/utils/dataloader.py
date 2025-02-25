@@ -75,67 +75,6 @@ class TrainLoader_SIDD_MD(Dataset):
     def get_dataloader(self, batch_size, shuffle=False):
         return DataLoader(self, batch_size=batch_size, shuffle=shuffle)
 
-class TrainLoader_SIDD_MD_old(Dataset):        
-    def __init__(self, root_dir, patch_size=256, n_patches=500, transform=None):
-        self.root_dir = root_dir
-        self.patch_size = patch_size
-        self.n_patches = n_patches
-        self.transform = transform if transform else transforms.ToTensor()
-        
-        self.images = self._load_noisy_images()
-
-    def _load_noisy_images(self):
-        images = []
-        subfolders = os.listdir(self.root_dir)
-        total_files = 0
-        
-        for subfolder in subfolders:
-            subfolder_path = os.path.join(self.root_dir, subfolder)
-            if os.path.isdir(subfolder_path):
-                total_files += sum(1 for file in os.listdir(subfolder_path) if 'NOISY' in file and file.lower().endswith(('png', 'jpg', 'jpeg')))
-        
-        idx = 0
-        for subfolder in subfolders:
-            subfolder_path = os.path.join(self.root_dir, subfolder)
-            if os.path.isdir(subfolder_path):
-                for file in os.listdir(subfolder_path):
-                    if 'NOISY' in file and file.lower().endswith(('png', 'jpg', 'jpeg')):
-                        image_path = os.path.join(subfolder_path, file)
-                        image = cv2.imread(image_path)
-                        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-                        images.append(image)
-                                      
-                        idx += 1
-                        sys.stdout.write(f"\r({int(idx/total_files*100)}/100)% training dataset loading..")
-                        sys.stdout.flush()
-        sys.stdout.write("\n")
-        return images
-
-    def _crop_patches(self, image):
-        h, w, _ = image.shape
-        patches = []
-        for _ in range(self.n_patches):
-            top = random.randint(0, max(0, h - self.patch_size))
-            left = random.randint(0, max(0, w - self.patch_size))
-            patch = image[top:top + self.patch_size, left:left + self.patch_size]
-            patch = self.transform(patch)
-            patches.append(patch)
-        return patches
-
-    def __len__(self):
-        return len(self.images) * self.n_patches
-
-    def __getitem__(self, idx):
-        image_idx = idx // self.n_patches
-        patch_idx = idx % self.n_patches
-        
-        image = self.images[image_idx]
-        patches = self._crop_patches(image)
-        return patches[patch_idx]
-
-    def get_dataloader(self, batch_size, shuffle=False):
-        return DataLoader(self, batch_size=batch_size, shuffle=shuffle)
-
 class TestLoader_SIDD_VAL_BM(Dataset):
     def __init__(self, root_dir, GT=False, transform=None):
         self.root_dir = root_dir
