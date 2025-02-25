@@ -14,11 +14,11 @@ Recent advancements in self-supervised denoising have made it possible to train 
 - Pytorch 1.12.1 (CUDAtoolkit=11.3)
 
 ## Dataset
-Prepare the [SIDD dataset](https://abdokamel.github.io/sidd/):  
+Prepare the [SIDD dataset](https://abdokamel.github.io/sidd/)  
 -SIDD Medium: Download 'sRGB images only' (~12 GB).  
 -SIDD Validation: Download 'Noisy sRGB data' and 'Ground-truth sRGB data' from 'SIDD Validation Data and Ground Truth'.  
 -SIDD Benchmark: Download 'Noisy sRGB data' from 'SIDD Benchmark Data'.  
-Prepare the [DND dataset](https://noise.visinf.tu-darmstadt.de/downloads/):  
+Prepare the [DND dataset](https://noise.visinf.tu-darmstadt.de/downloads/)  
 -DND Benchmark: Download 'Benchmark data' (12.8 GB).  
 For training and evaluation using our code, organize the prepared datasets as follows.   
 ```
