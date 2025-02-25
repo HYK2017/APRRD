@@ -41,11 +41,11 @@ Recent advancements in self-supervised denoising have made it possible to train 
 
 ## Dataset
 Prepare the [SIDD dataset](https://abdokamel.github.io/sidd/)  
--SIDD Medium: Download 'sRGB images only' (~12 GB).  
--SIDD Validation: Download 'Noisy sRGB data' and 'Ground-truth sRGB data' from 'SIDD Validation Data and Ground Truth'.  
--SIDD Benchmark: Download 'Noisy sRGB data' from 'SIDD Benchmark Data'.  
+-SIDD Medium: Download `sRGB images only` (~12 GB).  
+-SIDD Validation: Download `Noisy sRGB data` and `Ground-truth sRGB data` from `SIDD Validation Data and Ground Truth`.  
+-SIDD Benchmark: Download `Noisy sRGB data` from `SIDD Benchmark Data`.  
 Prepare the [DND dataset](https://noise.visinf.tu-darmstadt.de/downloads/)  
--DND Benchmark: Download 'Benchmark data' (12.8 GB).  
+-DND Benchmark: Download `Benchmark data` (12.8 GB).  
 For training and evaluation using our code, organize the prepared datasets as follows.   
 ```
 dataset/
@@ -89,7 +89,7 @@ dataset/
 
 ## Train, Test, Validate  
 Trainig of APR and RD using SIDD Medium.  
--Each traiend model is stored as ../trained/APR.pth and ../trained/APR_RD.pth.  
+-Each traiend model is stored as `../trained/APR.pth` and `../trained/APR_RD.pth`.  
 ```shell
 python train.py
 ```
@@ -98,8 +98,8 @@ Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained mode
 ```shell
 python test.py
 ```
--Loading the model parameters stored as ../pretrained/APR_pre.pth and ../pretrained/APR_RD_pre.pth.  
--Each result is stored in ../result/SIDD_Validation_inf, ../result/SIDD_Benchmark_inf, and ../result/DND_Benchmark_inf, respectively.  
+-Loading the model parameters stored as `../pretrained/APR_pre.pth` and `../pretrained/APR_RD_pre.pth`.  
+-Each result is stored in `../result/SIDD_Validation_inf`, `../result/SIDD_Benchmark_inf`, and `../result/DND_Benchmark_inf`, respectively.  
 
 Validation  
 ```shell
