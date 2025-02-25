@@ -13,6 +13,31 @@ Recent advancements in self-supervised denoising have made it possible to train 
 - Python 3.8.10
 - Pytorch 1.12.1 (CUDAtoolkit=11.3)
 
+## Code Structure
+```
+├─ codes/
+│    ├─ dataset/
+│    │    └─ README.md/            
+│    │    
+│    ├─ network/                 
+│    │    ├─ __init__.py
+│    │    ├─ baseline_network.py   
+│    │    └─ multi_target_T
+│    │
+│    └─ utils/
+│         ├─ __init__.py
+│         ├─ dataloader.py
+│         ├─ function.py
+│         ├─ metric.py
+│         └─ utility.py
+│   
+├─ config.json
+├─ preparation.py
+├─ train.py
+├─ test.py
+├─ validate.py
+```
+
 ## Dataset
 Prepare the [SIDD dataset](https://abdokamel.github.io/sidd/)  
 -SIDD Medium: Download 'sRGB images only' (~12 GB).  
@@ -43,7 +68,7 @@ dataset/
    │    ├─ ValidationGtBlocksSrgb.mat
    │    └─ ValidationNoisyBlocksSrgb.mat
    │
-   ├─ SIDD_Validation_sRGB/
+   ├─ SIDD_Benchmark_sRGB/
    │    └─ BenchmarkNoisyBlocksSrgb.mat
    │
    └─ dnd_2017/
