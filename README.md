@@ -85,3 +85,9 @@ dataset/
         ├─ info.mat
         └─ pixelmasks.mat
 ```
+
+## Acknowledgements
+This project is based on the following open-source projects. In particular, we benefit from the convenience of using the network of AT-BSN code as it is. We sincerely appreciate their authors for allowing us to use their excellent works as open-source.
+- [AT-BSN](https://github.com/hnmizuho/AT-BSN)
+- [SIDD](https://abdokamel.github.io/sidd/)
+- [DND](https://noise.visinf.tu-darmstadt.de/)
