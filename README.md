@@ -12,6 +12,7 @@ Recent advancements in self-supervised denoising have made it possible to train 
 - Ubuntu 20.04.5 LTS
 - Python 3.8.10
 - Pytorch 1.12.1 (CUDAtoolkit=11.3)
+- RTX 2080ti x 2ea
 
 ## Code Structure
 ```
@@ -84,6 +85,23 @@ dataset/
         │    └─ 00050.mat
         ├─ info.mat
         └─ pixelmasks.mat
+```
+
+## Train, Test, Validate  
+Trainig of APR and RD using SIDD Medium.  
+-Each traiend model is stored as ../trained/APR.pth and ../trained/APR_RD.pth.  
+```shell
+python train.py
+```
+
+Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained models.  
+-Loading the model parameters stored as ../pretrained/APR_pre.pth and ../pretrained/APR_RD_pre.pth.  
+-Each result is stored in ../result/SIDD_Validation_inf, ../result/SIDD_Benchmark_inf, and ../result/DND_Benchmark_inf, respectively.  
+
+Validation  
+-Calculation of PSNR and SSIM for the test results of SIDD Val.  
+-SIDD Bench and DND Bench require separate processing for submission (refer to their websites).  
+python test.py
 ```
 
 ## Acknowledgements
