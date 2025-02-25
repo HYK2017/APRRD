@@ -88,7 +88,7 @@ dataset/
         └─ pixelmasks.mat
 ```
 
-## Train, Test, Validate  
+## Train, Test and Validation  
 Trainig of APR and RD using SIDD Medium.  
 -Each traiend model is stored as `../trained/APR.pth` and `../trained/APR_RD.pth`.  
 ```shell
