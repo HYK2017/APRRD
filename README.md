@@ -12,3 +12,34 @@ Recent advancements in self-supervised denoising have made it possible to train 
 - Ubuntu 20.04.5 LTS
 - Python 3.8.10
 - Pytorch 1.12.1 (CUDAtoolkit=11.3)
+
+## Dataset
+```
+dataset/
+   ├─ SIDD_Medium_Srgb/
+   │     ├─ Data/
+   │     │   ├─ 0001_001_S6_00100_00060_3200_L/
+   │     │            ├─ 0001_GT_SRGB_010.png
+   │     │            ├─ 0001_GT_SRGB_011.png
+   │     │            ├─ 0001_NOISY_SRGB_010.png
+   │     │            └─ 0001_NOISY_SRGB_011.png
+   │     │  ..
+   │     │   └─ 0200_010_GP_01600_03200_5500_N/
+   │     │            ├─ 0200_GT_SRGB_010.png
+   │     │            ├─ 0200_GT_SRGB_011.png
+   │     │            ├─ 0200_NOISY_SRGB_010.png
+   │     │            └─ 0200_NOISY_SRGB_011.png
+   │     ├─ ReadMe_sRGB.txt
+   │     └─ Scene_Instances.txt
+   │
+   ├─ SIDD_Validation_sRGB/
+   │     ├─ ValidationGtBlocksSrgb.mat
+   │     └─ ValidationNoisyBlocksSrgb.mat
+   │
+   ├─ SIDD_Validation_sRGB/
+   │     └─ BenchmarkNoisyBlocksSrgb.mat
+   │
+   ├─ dnd_2017/
+
+
+```
