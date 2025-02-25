@@ -25,18 +25,18 @@ Recent advancements in self-supervised denoising have made it possible to train 
 │    │    ├─ baseline_network.py   # Network modules of AT-BSN and NBSN
 │    │    └─ multi_target_T        # Inference module for obtaining multi-target T from the trained AT-BSN.
 │    │
-│    └─ utils/
-│         ├─ __init__.py
-│         ├─ dataloader.py    # SIDD Medium loader for training / SIDD Val, Bench, and DND Bench loaders for inference / denoised result(SIDD Val) loader for evaluation.
-│         ├─ function.py      # Modules for the proposed methods, APR and Recharger.
-│         ├─ metric.py        # PSNR and SSIM calculation module
-│         └─ utility.py       # Loss functions, scheduler
-│   
-├─ config.json     # GPU settings, data and result paths, training hyperparameters, etc.
-├─ preparation.py  # Modularization of train, test, and validate.
-├─ train.py        # Model initialization, loading training data, training execution.
-├─ test.py         # loading trained model, test execution.
-├─ validate.py     # Calculation of evaluation results for SIDD Val.
+│    ├─ utils/
+│    │    ├─ __init__.py
+│    │    ├─ dataloader.py    # SIDD Medium loader for training / SIDD Val, Bench, and DND Bench loaders for inference / denoised result(SIDD Val) loader for evaluation.
+│    │    ├─ function.py      # Modules for the proposed methods, APR and Recharger.
+│    │    ├─ metric.py        # PSNR and SSIM calculation module
+│    │    └─ utility.py       # Loss functions, scheduler
+│    │
+     ├─ config.json     # GPU settings, data and result paths, training hyperparameters, etc.
+     ├─ preparation.py  # Modularization of train, test, and validate.
+     ├─ train.py        # Model initialization, loading training data, training execution.
+     ├─ test.py         # loading trained model, test execution.
+     └─ validate.py     # Calculation of evaluation results for SIDD Val.
 ```
 
 ## Dataset
