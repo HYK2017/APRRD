@@ -34,11 +34,11 @@ Recent advancements in self-supervised denoising have made it possible to train 
 │    │    ├─ metric.py        # PSNR and SSIM calculation module
 │    │    └─ utility.py       # Loss functions, scheduler
 │    │
-     ├─ config.json     # GPU settings, data and result paths, training hyperparameters, etc.
-     ├─ preparation.py  # Modularization of train, test, and validate.
-     ├─ train.py        # Model initialization, loading training data, training execution.
-     ├─ test.py         # loading trained model, test execution.
-     └─ validate.py     # Calculation of evaluation results for SIDD Val.
+      ├─ config.json     # GPU settings, data and result paths, training hyperparameters, etc.
+      ├─ preparation.py  # Modularization of train, test, and validate.
+      ├─ train.py        # Model initialization, loading training data, training execution.
+      ├─ test.py         # loading trained model, test execution.
+      └─ validate.py     # Calculation of evaluation results for SIDD Val.
 ```
 
 ## Dataset
