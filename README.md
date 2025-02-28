@@ -92,14 +92,14 @@ dataset/
 
 ## Train, Test and Validation  
 Trainig of APR and RD using SIDD Medium.  
--Each traiend model is stored as `../trained/APR.pth` and `../trained/APR_RD.pth`.  
+-Each traiend model will be stored as `../trained/APR.pth` and `../trained/APR_RD.pth`.  
 ```shell
 python train.py
 ```
 
 Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained models.  
 -Loading the model parameters stored as `../pretrained/APR_pre.pth` and `../pretrained/APR_RD_pre.pth`.  
--Each result is stored in `../result/SIDD_Validation_inf`, `../result/SIDD_Benchmark_inf`, and `../result/DND_Benchmark_inf`, respectively.  
+-Each result will be stored in `../result/SIDD_Validation_inf`, `../result/SIDD_Benchmark_inf`, and `../result/DND_Benchmark_inf`, respectively.  
 ```shell
 python test.py
 ```
