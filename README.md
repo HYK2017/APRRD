@@ -98,7 +98,7 @@ python train.py
 ```
 
 Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained models.  
--Loading the model parameters stored as `../pretrained/APR_pre.pth` and `../pretrained/APR_RD_pre.pth`.  
+-Loading the (pre-trained) model parameters stored as `../pretrained/APR_pre.pth` and `../pretrained/APR_RD_pre.pth`.  
 -Each result will be stored in `../result/SIDD_Validation_inf`, `../result/SIDD_Benchmark_inf`, and `../result/DND_Benchmark_inf`, respectively.  
 ```shell
 python test.py
