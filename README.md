@@ -20,7 +20,7 @@ Recent advancements in self-supervised denoising have made it possible to train 
 ```
 ├─ codes/
 │    ├─ dataset/
-│    │    └─ README.md/            # Download each dataset and organize them according to the given instructions.
+│    │    └─ README.md             # Download each dataset and organize them according to the given instructions.
 │    │    
 │    ├─ network/                 
 │    │    ├─ __init__.py   
