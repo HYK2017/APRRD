@@ -1,4 +1,4 @@
-## -- The final code review is underway, and the project page is scheduled to be completed on March 2nd. We apologize for any inconvenience and appreciate your patience. --
+## -- The final code review is underway, and the project page is scheduled to be completed on March 3rd. We apologize for any inconvenience and appreciate your patience. --
 
 # APR-RD: Complemental Two Steps for Self-Supervised Real Image Denoising
 
