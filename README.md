@@ -24,28 +24,29 @@ Recent advancements in self-supervised denoising have made it possible to train 
 │    │    
 │    ├─ network/                 
 │    │    ├─ __init__.py   
-│    │    ├─ baseline_network.py   # Network modules of AT-BSN and NBSN
-│    │    └─ multi_target_T        # Inference module for obtaining multi-target T from the trained AT-BSN.
-│    │
-│    ├─ utils/
-│    │    ├─ __init__.py
-│    │    ├─ dataloader.py    # SIDD Medium loader for training / SIDD Val, Bench, and DND Bench loaders for inference / denoised result(SIDD Val) loader for evaluation.
-│    │    ├─ function.py      # Modules for the proposed methods, APR and Recharger.
-│    │    ├─ metric.py        # PSNR and SSIM calculation module
-│    │    └─ utility.py       # Loss functions, scheduler
-│    │
+..   │    ├─ baseline_network.py   # Network modules of AT-BSN and NBSN
+     │    └─ multi_target_T        # Inference module for obtaining multi-target T from the trained AT-BSN.
+     │
+     ├─ utils/
+     │    ├─ __init__.py
+     │    ├─ dataloader.py    # Dataset Loaders for training and inference
+     │    ├─ function.py      # Modules for the proposed methods, APR and Recharger.
+     │    ├─ metric.py        # functions for PSNR and SSIM calculation
+     │    └─ utility.py       # Loss functions, scheduler
+     │
      ├─ config.json     # GPU settings, data and result paths, training hyperparameters, etc.
-     ├─ preparation.py  # Modularization of train, test, and validate.
-     ├─ train.py        # Model initialization, loading training data, training execution.
-     ├─ test.py         # loading trained model, test execution.
-     └─ validate.py     # Calculation of evaluation results for SIDD Val.
+     ├─ preparation.py  # Modularization of train, test, and validation.
+     ├─ train.py        # Model initialization, loading training data, and training execution.
+     ├─ test.py         # loading trained model, loading test data, and test execution.
+     └─ validate.py     # Evaluation results for SIDD Val.
 ```
 
 ## Dataset
 Prepare the [SIDD dataset](https://abdokamel.github.io/sidd/)  
--SIDD Medium: Download `sRGB images only` (~12 GB).  
+-SIDD Medium: Download `sRGB images only (~12 GB)`.  
 -SIDD Validation: Download `Noisy sRGB data` and `Ground-truth sRGB data` from `SIDD Validation Data and Ground Truth`.  
--SIDD Benchmark: Download `Noisy sRGB data` from `SIDD Benchmark Data`.  
+-SIDD Benchmark: Download `SIDD Benchmark Data (full-frame images, 1.84 GB)`
+                 and `Noisy sRGB data` from `SIDD Benchmark Data`.  
 Prepare the [DND dataset](https://noise.visinf.tu-darmstadt.de/downloads/)  
 -DND Benchmark: Download `Benchmark data` (12.8 GB).  
 
@@ -72,6 +73,17 @@ dataset/
    │    ├─ ValidationGtBlocksSrgb.mat
    │    └─ ValidationNoisyBlocksSrgb.mat
    │
+   ├─ SIDD_Benchmark_Data
+   │    ├─ 0009_001_S6_00800_00350_3200_L
+   │    │    ├─ 0009_METADATA_RAW_010
+   │    │    ├─ 0009_NOISY_RAW_010
+   │    │    └─ 0009_NOISY_SRGB_010
+   │    ..
+   │    └─ 0187_008_IP_01600_01600_3200_L 
+   │         ├─ 0187_METADATA_RAW_010
+   │         ├─ 0187_NOISY_RAW_010
+   │         └─ 0187_NOISY_SRGB_010
+   │
    ├─ SIDD_Benchmark_sRGB/
    │    └─ BenchmarkNoisyBlocksSrgb.mat
    │
@@ -91,22 +103,27 @@ dataset/
 ```
 
 ## Train, Test and Validation  
-Trainig of APR and RD using SIDD Medium.  
--Each traiend model will be stored as `../trained/APR.pth` and `../trained/APR_RD.pth`.  
+Trainig of APR(BSN) and RD(NBSN) using SIDD Medium.  
+-Each traiend model will be stored as `../trained/BSN_SIDD_Medium.pth` and `../trained/NBSN_SIDD_Medium.pth`.  
 ```shell
 python train.py
 ```
 
 Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained models.  
--Loading the (pre-trained) model parameters stored as `../pretrained/APR_pre.pth` and `../pretrained/APR_RD_pre.pth`.  
--Each result will be stored in `../result/SIDD_Validation_inf`, `../result/SIDD_Benchmark_inf`, and `../result/DND_Benchmark_inf`, respectively.  
+-Loading the (pre-trained) model parameters stored as `../pretrained/BSN_SIDD_Medium.pth` and `../pretrained/NBSN_SIDD_Medium.pth`.  
+-Each result will be stored in `../result/BSN/train_SIDD_Medium/test_SIDD_Validation`
+                               `                               /test_SIDD_Benchmark`
+                               `                               /test_DND_Benchmark`
+                               `../result/NBSN/train_SIDD_Medium/test_SIDD_Validation`
+                               `                                /test_SIDD_Benchmark`
+                               `                                /test_DND_Benchmark`
 ```shell
 python test.py
 ```
 
 Validation  
 -Calculation of PSNR and SSIM for the test results of SIDD Val.  
--SIDD Bench and DND Bench require separate processing for submission (refer to their websites).  
+-SIDD Benchmark and DND Benchmark require separate processing for submission (refer to their websites).  
 ```shell
 python validate.py
 ```
