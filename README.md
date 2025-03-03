@@ -38,7 +38,7 @@ Recent advancements in self-supervised denoising have made it possible to train 
      ├─ preparation.py  # Modularization of train, test, and validation.
      ├─ train.py        # Model initialization, loading training data, and training execution.
      ├─ test.py         # Loading trained model, loading test data, and test execution.
-     └─ validate.py     # Evaluation results for SIDD Val.
+     └─ validate.py     # Evaluation results for SIDD Validation.
 ```
 
 ## Dataset
@@ -125,7 +125,7 @@ python test.py
 ```
 
 Validation  
--Calculation of PSNR and SSIM for the test results of SIDD Val.  
+-Calculation of PSNR and SSIM for the test results of SIDD Validation.  
 -SIDD Benchmark and DND Benchmark require separate processing for submission (refer to their websites).  
 ```shell
 python validate.py
