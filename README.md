@@ -24,7 +24,7 @@ We provide two versions of the code and their corresponding training results.
 Before our AAAI submission, we implemented a 1.02M NBSN (Student C) based on the description in the AT-BSN paper (Exploring Efficient Asymmetric Blind-Spots for Self-Supervised Denoising in Real-World Scenarios, CVPR 2024).
 However, we found that their GitHub repository, which was made public after our submission, implements a 1.00M NBSN and states that the description in their paper was a typo.
 Therefore, we provide both the results and code for the 1.02M NBSN version, as stated in our paper, as well as the results and code for the 1.00M NBSN version, which we retrained after our submission.
-These are included as `NBSN_1.00M` and `NBSN_1.02M`, respectively.
+These are included as `NBSN_1.02M` and `NBSN_1.00M`, respectively.
 
 ## Code Structure
 ```
