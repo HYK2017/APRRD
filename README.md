@@ -110,13 +110,16 @@ dataset/
 ```
 
 ## Train, Test and Validation  
-Trainig of APR(BSN) and RD(NBSN) using SIDD Medium.  
--Each traiend model will be stored as `../trained/BSN_SIDD_Medium.pth` and `../trained/NBSN_SIDD_Medium.pth`.  
--If you want to train with other datasets, please refer to the comments in the file.
 ```shell
 python train.py
 ```
+Trainig of APR(BSN) and RD(NBSN) using SIDD Medium.  
+-Each traiend model will be stored as `../trained/BSN_SIDD_Medium.pth` and `../trained/NBSN_SIDD_Medium.pth`.  
+-If you want to train with other datasets, please refer to the comments in the file.
 
+```shell
+python test.py
+```
 Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained models.  
 -Loading the (pre-trained) model parameters stored as `../pretrained/BSN_SIDD_Medium.pth` and `../pretrained/NBSN_SIDD_Medium.pth`.  
 -Each result will be stored in  
@@ -127,16 +130,13 @@ Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained mode
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/test_SIDD_Benchmark`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/test_DND_Benchmark`.  
 -If you want to test a model trained on other datasets or test the model you trained, please refer to the comments in the file.
-```shell
-python test.py
-```
 
-Validation  
--Calculation of PSNR and SSIM for the test results of SIDD Validation.  
--SIDD Benchmark and DND Benchmark require separate processing for submission (refer to their websites).  
 ```shell
 python validate.py
 ```
+Validation  
+-Calculation of PSNR and SSIM for the test results of SIDD Validation.  
+-SIDD Benchmark and DND Benchmark require separate processing for submission (refer to their websites).  
 
 ## Acknowledgements
 This project is based on the following open-source projects. In particular, we benefit from the convenience of using the network of AT-BSN code as it is. We sincerely appreciate their authors for allowing us to use their excellent works as open-source.
