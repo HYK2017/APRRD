@@ -1,0 +1,58 @@
+{
+    "gpu_use": 2,
+    
+    "dataset_path": {
+        "training": {
+            "SIDD_Medium": "../dataset/SIDD_Medium_Srgb",
+            "SIDD_Benchmark": "../dataset/SIDD_Benchmark_Data",
+            "DND_Benchmark": "../dataset/dnd_2017"
+        },
+        "inference": {
+            "SIDD_Validation": "../dataset/SIDD_Validation_sRGB",
+            "SIDD_Benchmark": "../dataset/SIDD_Benchmark_sRGB",
+            "DND_Benchmark": "../dataset/dnd_2017"
+        }
+    },
+    
+    "trained_path": "../trained",
+        
+    "pretrained_path": "../pretrained",
+    
+    "result_path": "../result",
+        
+    "n_patches": 200,
+        
+    "batch_size": {
+        "Training": 8,
+        "Inference": {
+            "SIDD (BSN)": 8,
+            "DND (BSN)": 2,
+            "SIDD (NBSN)": 40,
+            "DND (NBSN)": 10
+        }
+    },
+        
+    "patch_size": {
+        "BSN": 256,
+        "NBSN": 128
+    },
+        
+    "lr": 0.0003,
+        
+    "total_iter": {
+        "BSN": 400000,
+        "NBSN": 200000
+    },
+        
+    "shift_factor": {
+        "training": 5,
+        "inference": 1,
+        "distillation": [0, 1, 2, 3, 4, 5]
+    },
+        
+    "padding": 16,
+        
+    "reg_factor": 4,
+        
+    "logging_iter": 1
+}
