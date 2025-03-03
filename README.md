@@ -10,16 +10,16 @@ The project provides the official PyTorch implementation with pretrained models 
 ## Abstract
 Recent advancements in self-supervised denoising have made it possible to train models without needing a large amount of noisy-clean image pairs. A significant development in this area is the use of blind-spot networks (BSNs), which use single noisy images as training pairs by masking some input information to prevent noise transmission to the network output. Researchers have shown that BSNs are capable of reconstructing clean pixels from various types of independent pixel-wise degradations, such as synthetic additive white Gaussian noise (AWGN). However, unlike synthetic noise, real noise often contains highly correlated components which can induce noise transmission and reduce the performance of BSNs. To address the spatial correlation of real noise, we propose the Adjacent Pixel Replacer (APR), which decorrelates noise without a downsampling process that is widely adopted in previous research. The dissimilarity in our APR-generated pairs serves as relatively different noise components during training. Hence, it enables the BSN to block noise transmission while utilizing clean information effectively. As a result, BSN can utilize denser information to reconstruct the corresponding center pixel. We also propose Recharged Distillation (RD) to enhance high-frequency textures without additional network modifications. This method selectively refines clean information from recharged noisy pixels during distillation. Extensive experimental results demonstrate that our proposed method outperforms the existing state-of-the-art self-supervised denoising methods in real sRGB space.
 
+## Visual Results
+Visual comparison with recent self-supervised methods.
+
+<p align="center"><img src="figure/Visual Comparison.png" width="950"></p>
+
 ## Environment
 - Ubuntu 20.04.5 LTS
 - Python 3.8.10
 - Pytorch 1.12.1 (CUDAtoolkit=11.3)
 - RTX 2080ti * 2ea
-
-## Visual Results
-Visual comparison with recent self-supervised methods.
-
-<p align="center"><img src="figure/Visual Comparison.png" width="950"></p>
 
 ## GitHub Structure
 We provide two versions of the code and their corresponding training results.
