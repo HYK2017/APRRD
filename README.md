@@ -31,13 +31,13 @@ Recent advancements in self-supervised denoising have made it possible to train 
      │    ├─ __init__.py
      │    ├─ dataloader.py    # Dataset Loaders for training and inference
      │    ├─ function.py      # Modules for the proposed methods, APR and Recharger.
-     │    ├─ metric.py        # functions for PSNR and SSIM calculation
+     │    ├─ metric.py        # Functions for PSNR and SSIM calculation
      │    └─ utility.py       # Loss functions, scheduler
      │
      ├─ config.json     # GPU settings, data and result paths, training hyperparameters, etc.
      ├─ preparation.py  # Modularization of train, test, and validation.
      ├─ train.py        # Model initialization, loading training data, and training execution.
-     ├─ test.py         # loading trained model, loading test data, and test execution.
+     ├─ test.py         # Loading trained model, loading test data, and test execution.
      └─ validate.py     # Evaluation results for SIDD Val.
 ```
 
@@ -105,6 +105,7 @@ dataset/
 ## Train, Test and Validation  
 Trainig of APR(BSN) and RD(NBSN) using SIDD Medium.  
 -Each traiend model will be stored as `../trained/BSN_SIDD_Medium.pth` and `../trained/NBSN_SIDD_Medium.pth`.  
+-If you want to train with other datasets, please refer to the comments in the file.
 ```shell
 python train.py
 ```
@@ -118,6 +119,7 @@ Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained mode
 `../result/NBSN/train_SIDD_Medium/test_SIDD_Validation`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/test_SIDD_Benchmark`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/test_DND_Benchmark`  
+-If you want to test a model trained on other datasets or test the model you trained, please refer to the comments in the file.
 ```shell
 python test.py
 ```
