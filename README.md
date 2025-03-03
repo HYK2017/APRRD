@@ -111,8 +111,9 @@ python train.py
 
 Test on SIDD Validation, Benchmark, and DND Benchmark using the two trained models.  
 -Loading the (pre-trained) model parameters stored as `../pretrained/BSN_SIDD_Medium.pth` and `../pretrained/NBSN_SIDD_Medium.pth`.  
--Each result will be stored in `../result/BSN/train_SIDD_Medium/test_SIDD_Validation`  
-                               `                               /test_SIDD_Benchmark`  
+-Each result will be stored in  
+`../result/BSN/train_SIDD_Medium/test_SIDD_Validation`  
+                                                              `/test_SIDD_Benchmark`  
                                `                               /test_DND_Benchmark`  
                                `../result/NBSN/train_SIDD_Medium/test_SIDD_Validation`  
                                `                                /test_SIDD_Benchmark`  
