@@ -19,7 +19,7 @@ with open("./config.json", "r") as f:
     config = json.load(f)
     
 def setup_device():
-    torch.cuda.set_device(0)  # 기본적으로 첫 번째 GPU 사용
+    torch.cuda.set_device(0)  
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     available_gpus = torch.cuda.device_count()
     if config["gpu_use"] > available_gpus:
