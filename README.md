@@ -45,7 +45,7 @@ These are included as `NBSN_1.00M` and `NBSN_1.02M`, respectively.
      ├─ preparation.py  # Modularization of train, test, and validation.
      ├─ train.py        # Model initialization, loading training data, and training execution.
      ├─ test.py         # Loading trained model, loading test data, and test execution.
-     └─ validate.py     # Evaluation results for SIDD Validation.
+     └─ validate.py     # Evaluation execution for SIDD Validation.
 ```
 
 ## Dataset
