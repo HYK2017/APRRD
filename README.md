@@ -16,6 +16,11 @@ Recent advancements in self-supervised denoising have made it possible to train 
 - Pytorch 1.12.1 (CUDAtoolkit=11.3)
 - RTX 2080ti * 2ea
 
+## Visual Results
+Visual comparison with recent self-supervised methods.
+
+<p align="center"><img src="figure/Visual Comparison.png" width="950"></p>
+
 ## GitHub Structure
 We provide two versions of the code and their corresponding training results.
 Before our AAAI submission, we implemented a 1.02M NBSN (Student C) based on the description in the AT-BSN paper (Exploring Efficient Asymmetric Blind-Spots for Self-Supervised Denoising in Real-World Scenarios, CVPR 2024).
