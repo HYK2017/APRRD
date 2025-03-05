@@ -141,6 +141,19 @@ Validation
 python validate.py
 ```
 
+## Citation
+```
+@inproceedings{kim2025apr,
+  title={APR-RD: Complemental Two Steps for Self-Supervised Real Image Denoising},
+  author={Kim, Hyunjun and Cho, Nam Ik},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={},
+  number={},
+  pages={},
+  year={2025}
+}
+```
+
 ## Acknowledgements
 This project is based on the following open-source projects. In particular, we benefit from the convenience of using the network of AT-BSN code as it is. We sincerely appreciate their authors for allowing us to use their excellent works as open-source.
 - [AT-BSN](https://github.com/hnmizuho/AT-BSN)
