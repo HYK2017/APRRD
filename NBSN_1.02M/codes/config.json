@@ -3,14 +3,14 @@
     
     "dataset_path": {
         "training": {
-            "SIDD_Medium": "../dataset/SIDD_Medium_Srgb",
-            "SIDD_Benchmark": "../dataset/SIDD_Benchmark_Data",
-            "DND_Benchmark": "../dataset/dnd_2017"
+            "SIDD_Medium": "./dataset/SIDD_Medium_Srgb",
+            "SIDD_Benchmark": "./dataset/SIDD_Benchmark_Data",
+            "DND_Benchmark": "./dataset/dnd_2017"
         },
         "inference": {
-            "SIDD_Validation": "../dataset/SIDD_Validation_sRGB",
-            "SIDD_Benchmark": "../dataset/SIDD_Benchmark_sRGB",
-            "DND_Benchmark": "../dataset/dnd_2017"
+            "SIDD_Validation": "./dataset/SIDD_Validation_sRGB",
+            "SIDD_Benchmark": "./dataset/SIDD_Benchmark_sRGB",
+            "DND_Benchmark": "./dataset/dnd_2017"
         }
     },
     
