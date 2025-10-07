@@ -24,7 +24,7 @@ class Trainingset_Loader(Dataset):
         subfolders = os.listdir(self.root_dir)
         
         total_idx = 0
-        for root, _, files in os.walk(self.root_dir):  # 폴더 내 모든 파일 탐색
+        for root, _, files in os.walk(self.root_dir):  
             for file in files:
                 if 'SIDD' in root and 'NOISY' in file and file.lower().endswith(('png', 'jpg', 'jpeg')):
                     total_idx += 1
@@ -32,7 +32,7 @@ class Trainingset_Loader(Dataset):
                     total_idx += 1
                     
         idx = 0
-        for root, _, files in os.walk(self.root_dir):  # 폴더 내 모든 파일 탐색
+        for root, _, files in os.walk(self.root_dir): 
             for file in files:
                 if 'SIDD' in root and 'NOISY' in file and file.lower().endswith(('png', 'jpg', 'jpeg')):
                     image_path = os.path.join(root, file)
@@ -112,7 +112,7 @@ class Trainingset_Loader(Dataset):
         patches = self._crop_patches(image, crop_info, aug_info)
         return patches[patch_idx]
 
-    def get_dataloader(self, batch_size, shuffle=False):
+    def get_dataloader(self, batch_size, shuffle=True):
         return DataLoader(self, batch_size=batch_size, shuffle=shuffle)
 
 class Testset_Loader_SIDD(Dataset):
