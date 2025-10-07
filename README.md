@@ -147,9 +147,9 @@ python validate.py
   title={APR-RD: Complemental Two Steps for Self-Supervised Real Image Denoising},
   author={Kim, Hyunjun and Cho, Nam Ik},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={},
-  number={},
-  pages={},
+  volume={39},
+  number={4},
+  pages={4257--4265},
   year={2025}
 }
 ```
